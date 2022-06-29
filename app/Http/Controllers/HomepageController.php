@@ -11,6 +11,8 @@ class HomepageController extends Controller
 
         $train = Train::all();
 
-        return view('Homepage', compact('train'));
+        $today_train = Train::where('departure_date', '2022/06/29')->get();
+
+        return view('Homepage', compact('train', 'today_train'));
     }
 }

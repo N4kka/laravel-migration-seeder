@@ -15,6 +15,7 @@ class UpdateTrainTable extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             $table->tinyInteger('ticket_price')->after('train_code')->nullable();
+            $table->date('departure_date')->after('arrival_time');
         });
     }
 
