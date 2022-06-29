@@ -1,3 +1,5 @@
+<h1>Lista dei treni:</h1>
+
 @foreach ($train as $item)
     <div class="train">
         <h3>{{ $item->company }}</h3>
